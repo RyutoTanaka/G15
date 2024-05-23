@@ -11,14 +11,14 @@ import math
 class MotorDriver(Node):
     PWM_RIGHT_PIN = 32
     PWM_LEFT_PIN = 33
-    DIRECTION_RIGHT_PIN = 1
-    DIRECTION_LEFT_PIN = 2
+    DIRECTION_RIGHT_PIN = 31
+    DIRECTION_LEFT_PIN = 29
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(PWM_RIGHT_PIN, GPIO.OUT, initial=GPIO.HIGH)
-    right_pwm = GPIO.PWM(PWM_RIGHT_PIN, 1.0)
+    right_pwm = GPIO.PWM(PWM_RIGHT_PIN, 1000)
     GPIO.setup(PWM_LEFT_PIN, GPIO.OUT, initial=GPIO.HIGH)
-    left_pwm = GPIO.PWM(PWM_LEFT_PIN, 1.0)
+    left_pwm = GPIO.PWM(PWM_LEFT_PIN, 1000)
     GPIO.setup(DIRECTION_RIGHT_PIN, GPIO.OUT)
     GPIO.setup(DIRECTION_LEFT_PIN, GPIO.OUT)
     def __init__(self):
