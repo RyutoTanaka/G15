@@ -9,10 +9,10 @@ import Jetson.GPIO as GPIO
 import math
 
 class MotorDriver(Node):
-    PWM_RIGHT_PIN = 32
-    PWM_LEFT_PIN = 33
-    DIRECTION_RIGHT_PIN = 31
-    DIRECTION_LEFT_PIN = 15
+    PWM_RIGHT_PIN = 33
+    PWM_LEFT_PIN = 32
+    DIRECTION_RIGHT_PIN = 16
+    DIRECTION_LEFT_PIN = 12
     def __init__(self):
         super().__init__('motor_driber')
         
