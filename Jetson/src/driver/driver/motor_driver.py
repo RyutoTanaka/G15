@@ -31,7 +31,11 @@ class MotorDriver(Node):
             self.pwm_left_callback,
             qos.qos_profile_sensor_data)
         self.pwm_left_subscription  # prevent unused variable warning
-
+        
+        timer_period = 0.1  # seconds        
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.timeout_cnt = 0
+        
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.PWM_RIGHT_PIN, GPIO.OUT, initial=GPIO.HIGH)
         self.right_pwm = GPIO.PWM(self.PWM_RIGHT_PIN, 1000)
@@ -41,12 +45,16 @@ class MotorDriver(Node):
         GPIO.setup(self.DIRECTION_LEFT_PIN, GPIO.OUT)
     
     def timer_callback(self):
-        if(timeout_cnt > 100):
+        if(self.timeout_cnt > 40):
             self.right_pwm.stop()
             self.left_pwm.stop()
+        elif(self.timeout_cnt > 20):
+            self.right_pwm.start(1.0)
+            self.left_pwm.start(1.0)
         self.timeout_cnt += 1
     
     def pwm_right_callback(self, msg):
+        self.timeout_cnt = 0
         self.get_logger().info('I heard right: "%f"' % msg.data)
         if msg.data >= 0.0 :
             GPIO.output(self.DIRECTION_RIGHT_PIN, GPIO.LOW)
@@ -56,6 +64,7 @@ class MotorDriver(Node):
 
 
     def pwm_left_callback(self, msg):
+        self.timeout_cnt = 0
         self.get_logger().info('I heard left: "%f"' % msg.data)
         if msg.data > 0.0 :
             GPIO.output(self.DIRECTION_LEFT_PIN, GPIO.HIGH)
