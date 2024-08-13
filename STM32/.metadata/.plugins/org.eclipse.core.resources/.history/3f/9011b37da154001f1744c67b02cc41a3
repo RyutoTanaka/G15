@@ -1,0 +1,30 @@
+/*
+ * define.h
+ *
+ *  Created on: Aug 7, 2024
+ *      Author: ryuto
+ */
+
+#ifndef INC_DEFINE_H_
+#define INC_DEFINE_H_
+
+//制御周波数
+const RATE = 100;
+//エンコーダーの分解能
+const RESOLUTION = 4096;
+//エンコーダーが1回転するときにタイヤは何回転するか
+const ENC_TO_TIRE = 10/28
+
+
+
+struct Command {
+	float speed_l;
+	float speed_r;
+}
+
+struct Result {
+	float speed_l;
+	float speed_r;
+}
+
+#endif /* INC_DEFINE_H_ */

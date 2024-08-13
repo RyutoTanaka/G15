@@ -1,0 +1,41 @@
+/*
+ * define.h
+ *
+ *  Created on: Aug 7, 2024
+ *      Author: ryuto
+ */
+
+#ifndef INC_DEFINE_H_
+#define INC_DEFINE_H_
+
+//制御周波数
+const int RATE = 100;
+const float DT = 0.01;
+//エンコーダーの分解能
+const int RESOLUTION = 4096;
+//エンコーダーが1回転するときにタイヤは何回転するか
+const float ENC_TO_TIRE = 10/28;
+
+//duty比100%となるduty_cnt
+const uint32_t MAX_DUTY_CNT = 7999;
+
+// floatとuint32_tの変換を簡単にするために共用体を使用
+typedef struct{
+	float vel_l;
+	float vel_r;
+} Command;
+
+typedef struct {
+	float vel_l;
+	float vel_r;
+}Result ;
+
+typedef struct {
+	float kp;
+	float ki;
+
+	float integral_l;
+	float integral_r;
+}PIController;
+
+#endif /* INC_DEFINE_H_ */

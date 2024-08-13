@@ -1,0 +1,18 @@
+/*
+ * control_loop.h
+ *
+ *  Created on: Aug 7, 2024
+ *      Author: ryuto
+ */
+
+
+void init(){
+	HAL_TIM_Encoder_Start( &htim2, TIM_CHANNEL_ALL );
+	HAL_TIM_Encoder_Start( &htim3, TIM_CHANNEL_ALL );
+	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+}
+
+void update(){
+	
+}

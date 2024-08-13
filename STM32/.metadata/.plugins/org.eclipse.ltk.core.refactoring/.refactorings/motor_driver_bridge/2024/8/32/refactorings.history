@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;motor_driver_bridge/Core/Inc/encoder&apos; to &apos;encoder.h&apos;" description="Rename resource &apos;encoder&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/encoder" name="encoder.h" stamp="1723018895694" updateReferences="true"/>
+</session>

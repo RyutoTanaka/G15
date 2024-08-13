@@ -1,0 +1,47 @@
+19:49:14 **** Incremental Build of configuration Debug for project motor_driver_bridge ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_SPI_TxRxCpltCallback':
+../Core/Src/main.c:98:36: warning: passing argument 2 of 'HAL_SPI_Transmit_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   98 |         HAL_SPI_Transmit_DMA(hspi, &g_result, sizeof(g_result));
+      |                                    ^~~~~~~~~
+      |                                    |
+      |                                    Result *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:315,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:800:74: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'Result *'
+  800 | HAL_StatusTypeDef HAL_SPI_Transmit_DMA(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size);
+      |                                                                 ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:156:39: warning: passing argument 2 of 'HAL_SPI_TransmitReceive_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  156 |   HAL_SPI_TransmitReceive_DMA(&hspi1, &g_command, &g_result, sizeof(g_command));
+      |                                       ^~~~~~~~~~
+      |                                       |
+      |                                       Command *
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:802:81: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'Command *'
+  802 | HAL_StatusTypeDef HAL_SPI_TransmitReceive_DMA(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData,
+      |                                                                        ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:156:51: warning: passing argument 3 of 'HAL_SPI_TransmitReceive_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  156 |   HAL_SPI_TransmitReceive_DMA(&hspi1, &g_command, &g_result, sizeof(g_command));
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   Result *
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:802:99: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'Result *'
+  802 | HAL_StatusTypeDef HAL_SPI_TransmitReceive_DMA(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData,
+      |                                                                                          ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "motor_driver_bridge.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="motor_driver_bridge.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: motor_driver_bridge.elf
+ 
+arm-none-eabi-size  motor_driver_bridge.elf 
+arm-none-eabi-objdump -h -S motor_driver_bridge.elf  > "motor_driver_bridge.list"
+   text	   data	    bss	    dec	    hex	filename
+  39024	    468	   2644	  42136	   a498	motor_driver_bridge.elf
+Finished building: default.size.stdout
+ 
+Finished building: motor_driver_bridge.list
+ 
+
+19:49:15 Build Finished. 0 errors, 3 warnings. (took 991ms)
+

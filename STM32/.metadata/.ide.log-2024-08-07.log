@@ -1,0 +1,41 @@
+2024-08-08 00:04:50,739 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 315107168 Bytes (720371712)
+2024-08-08 00:04:51,727 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 330881272 Bytes (720371712)
+2024-08-08 00:04:53,689 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 470376312 Bytes (720371712)
+2024-08-08 00:04:54,128 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-08-08 00:04:54,129 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: TIM6_7F3
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: TIM1_8F3
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: TIM1_8F3
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: TIM1_8F3
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-08-08 00:04:54,130 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: CAN
+2024-08-08 00:04:54,131 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-08-08 00:04:54,132 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.0.202406281431\\db\
+2024-08-08 00:04:54,304 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\license.tmp_save
+2024-08-08 00:04:54,665 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\license.tmp
+2024-08-08 00:04:54,773 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\gpio.tmp_save
+2024-08-08 00:04:54,916 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\gpio.tmp
+2024-08-08 00:04:55,421 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\stm32f3xx_it.c_save
+2024-08-08 00:04:55,551 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\stm32f3xx_it.c
+2024-08-08 00:04:55,573 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\stm32f3xx_it.h_save
+2024-08-08 00:04:55,668 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\stm32f3xx_it.h
+2024-08-08 00:04:55,717 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\stm32f3xx_hal_msp.c_save
+2024-08-08 00:04:55,942 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\stm32f3xx_hal_msp.c
+2024-08-08 00:04:55,965 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\system.tmp_save
+2024-08-08 00:04:56,050 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\MXTmpFiles\system.tmp
+2024-08-08 00:04:56,085 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\stm32f3xx_hal_conf.h_save
+2024-08-08 00:04:56,195 [INFO] CodeEngine:335 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\stm32f3xx_hal_conf.h
+2024-08-08 00:04:56,229 [WARN] IPConfigManager:3554 - IP not found : TIM
+2024-08-08 00:04:56,232 [WARN] CodeGenerator:4002 - IP not found : null
+2024-08-08 00:04:56,263 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\main.h_save
+2024-08-08 00:04:56,383 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Inc\main.h
+2024-08-08 00:04:56,409 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\main.c_save
+2024-08-08 00:04:56,612 [INFO] CodeEngine:279 - Generated code: C:\Users\ryuto\Documents\kosen\sotuken\G15\STM32\motor_driver_bridge\Core\Src\main.c
+2024-08-08 00:04:57,047 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 156mS.
+2024-08-08 00:04:57,052 [INFO] ProjectBuilder:4828 - Project Generator version: 4.4.0-B60
+2024-08-08 00:04:57,118 [INFO] ConfigFileManager:1531 - The Die is : DIE438
+2024-08-08 00:04:57,135 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-08-08 00:04:57,148 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-08-08 00:04:57,167 [INFO] ApiDbMcu:508 - Load IP Config File for TOUCHSENSING

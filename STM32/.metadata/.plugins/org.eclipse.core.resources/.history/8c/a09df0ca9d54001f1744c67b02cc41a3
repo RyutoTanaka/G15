@@ -1,0 +1,21 @@
+/*
+ * define.h
+ *
+ *  Created on: Aug 7, 2024
+ *      Author: ryuto
+ */
+
+#ifndef INC_DEFINE_H_
+#define INC_DEFINE_H_
+
+struct command {
+	float speed_l;
+	float speed_r;
+}
+
+struct result {
+	float speed_l;
+	float speed_r;
+}
+
+#endif /* INC_DEFINE_H_ */
