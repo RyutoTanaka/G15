@@ -6,6 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
+#include "controller/define.h"
 #include "controller/spi.hpp"
 
 using namespace std::chrono_literals;
@@ -32,13 +33,16 @@ class MinimalPublisher : public rclcpp::Node
   private:
     void timer_callback()
     {
+      cmd_.vel_l = 1.0f;
+      cmd_.vel_r = 1.0f;
+
       static auto spi_data = [&]() {
         kiks::io::spi::Data spi_data = {};
-        spi_data.len = sizeof(extension_tx_data_);
+        spi_data.len = sizeof(cmd_);
         spi_data.speed_hz = 1000000;
         spi_data.bits_per_word = 8;
-        spi_data.tx_buf = reinterpret_cast<std::uint64_t>(&extension_tx_data_);
-        spi_data.rx_buf = reinterpret_cast<std::uint64_t>(&extension_rx_data);
+        spi_data.tx_buf = reinterpret_cast<std::uint64_t>(&cmd_);
+        spi_data.rx_buf = reinterpret_cast<std::uint64_t>(&res_);
         return spi_data;
       }();
       spi_.write(&spi_data);
@@ -53,6 +57,8 @@ class MinimalPublisher : public rclcpp::Node
     size_t count_;
     
     kiks::io::spi::Master spi_;
+    Command cmd_;
+    Result res_;
 };
 
 int main(int argc, char * argv[])
